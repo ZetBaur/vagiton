@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,400&display=swap");
 // ШРИФТ ПО УМОЛЧАНИЮ=============================================================================================================================
 $fontfamily: "Open Sans";
 // =============================================================================================================================================
@@ -149,7 +149,7 @@ $fontfamily: "Open Sans";
 
 .promo {
   min-height: 1400px;
-  background-image: url(/img/promo/promo.png);
+  background-image: url(img/promo/promo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 90% 0;
@@ -204,7 +204,7 @@ $fontfamily: "Open Sans";
   // .promo__content-item-health
 
   &__content-item-health {
-    background-image: url(/img/promo/1.png);
+    background-image: url(img/promo/1.png);
   }
 
   // .promo__content-text
@@ -215,13 +215,13 @@ $fontfamily: "Open Sans";
   // .promo__content-item-child
 
   &__content-item-child {
-    background-image: url(/img/promo/2.png);
+    background-image: url(img/promo/2.png);
   }
 
   // .promo__content-item-life
 
   &__content-item-life {
-    background-image: url(/img/promo/3.png);
+    background-image: url(img/promo/3.png);
   }
 
   // .promo__img
@@ -295,12 +295,11 @@ $fontfamily: "Open Sans";
     }
   }
 
-  &__title{
+  &__title {
     margin: 0px 0px 20px 0px;
-
   }
 
-  &__phone{
+  &__phone {
     margin: 0px 0px 20px 0px;
   }
 
@@ -322,17 +321,16 @@ $fontfamily: "Open Sans";
 
   &__socials-item {
     margin: 20px;
-    svg{
+    svg {
       fill: #fff;
       width: 50px;
       height: 50px;
     }
-    &:hover{
-    svg{
-      fill: #ecdee4;
+    &:hover {
+      svg {
+        fill: #ecdee4;
+      }
     }
-    }
-
   }
 
   // .footer__socials-link
@@ -342,6 +340,114 @@ $fontfamily: "Open Sans";
 }
 
 // =============================================================================================================================================
+.production {
+  // .production__inner
+
+  &__inner {
+    margin: 50px 0px 50px 0px;
+  }
+
+  // .production__item-wrapper
+
+  &__item-wrapper {
+    display: flex;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      .production__item-descr {
+        text-align: right;
+      }
+      .production__item-btn{
+        align-self: flex-end;
+      }
+    }
+  }
+
+  // .production__item
+
+  &__item {
+    width: 50%;
+  }
+
+  // .production__item-slider
+
+  &__item-slider {
+    overflow: hidden;
+  }
+  &__item-inner {
+    color: #a4627e;
+  }
+
+  // .production__item-descr
+
+  &__item-descr {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    a {
+      color: #a4627e;
+    }
+  }
+
+  // .production__item-title
+
+  &__item-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0px 0px 20px 0px;
+    letter-spacing: -0.75px;
+  }
+
+  // .production__item-text
+
+  &__item-text {
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0px 0px 20px 0px;
+    span {
+      font-size: 27px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+  &__item-link {
+    font-size: 27px;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  &__item-price {
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -0.75px;
+    line-height: normal;
+    color: #a4627e;
+  }
+  &__item-old-price {
+    font-style: italic;
+    text-decoration: line-through;
+  }
+  &__item-new-price {
+    font-weight: 800;
+  }
+  &__item-btn {
+    color: #a4627e;
+    text-transform: uppercase;
+    font-size: 30px;
+    align-self: start;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: -0.75px;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+      transition: all 0.2s;
+    }
+  }
+}
 
 // =============================================================================================================================================
 
