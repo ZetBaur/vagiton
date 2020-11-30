@@ -1,84 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap");
 // ШРИФТ ПО УМОЛЧАНИЮ=============================================================================================================================
-$fontfamily: "";
+$fontfamily: "Open Sans";
 // =============================================================================================================================================
 @import "_normalize.scss";
 @import "_null.scss";
-@import "_slick.scss";
-@import "_popup.scss";
-@import "_tabs.scss";
-@import "_spoller.scss";
-@import "_forms.scss";
-
-
-
-
-
-@import "_fonts.scss";
 @import "_global.scss";
 
-@import "_header.scss";
+// @import "_slick.scss";
+@import "_tabs.scss";
+@import "_spoller.scss";
+
 @import "_footer.scss";
 
+// =============================================================================================================================================
+.header {
+  background-color: $primary-color;
+
+  // .header__body
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    align-items: center;
+  }
+
+  // .header__menu
+
+  &__menu {
+   
+    font-size: 21px;
+    font-weight: 600;
+   
+    text-transform: uppercase;
+    
+  }
+
+  // .header__menu-list
+
+  &__menu-list {
+    display: flex;
+  }
+
+  // .header__menu-item
+
+  &__menu-item {
+    position: relative;
+    margin: 0px 60px 0px 0px;
+    &:last-child{
+      margin: 0;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 0;
+      height: 2px;
+      background-color: $second-color;
+    }
+    &:hover{
+      &:before{
+        width: 100%;
+        transition: all .3s;
+      }
+    }
+    &.active{
+      &:before{
+        width: 100%;
+      }
+    }
+  }
+
+  // .header__cart
+
+  &__cart {
+    position: relative;
+    &:hover{
+      span,
+      svg{
+        transform: scale(1.05);
+
+      }
+    }
+    svg{
+      fill: #e83e55;
+
+    }
+    span{
+      width: 60px;
+      height: 60px;
+      background-color: $second-color;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 25px;
+      font-weight: 600;
+      position: absolute;
+      top: -30px;
+      right: -50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+    }
+  }
+
+  // .header__cart-info
+
+  &__cart-info {
+  }
+}
 
 // =============================================================================================================================================
 
+.promo {
+  min-height: 1400px;
+  background-image: url(/img/promo/promo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 90% 0;
+  background-color: $primary-color;
+  padding: 50px 0px 0px 0px;
 
-.white-popup {
-    position: relative;
-    background: #FFF;
-    padding: 25px;
-    width:auto;
-    max-width: 400px;
-    margin: 0 auto; 
+  // .promo__inner
+
+  &__inner {
   }
-  
-  
-  
-  
- 
-  .mfp-zoom-in {
-    
-    /* start state */
-    .mfp-with-anim {
-      opacity: 0;
-      transition: all 0.2s ease-in-out; 
-      transform: scale(0.8); 
-    }
-    
-    &.mfp-bg {
-      opacity: 0;
-        transition: all 0.3s ease-out;
-    }
-    
-    /* animate in */
-    &.mfp-ready {
-      .mfp-with-anim {
-        opacity: 1;
-        transform: scale(1); 
-      }
-      &.mfp-bg {
-        opacity: 0.8;
-      }
-    }
-    
-    /* animate out */
-    &.mfp-removing {
-      
-      .mfp-with-anim {
-        transform: scale(0.8); 
-        opacity: 0;
-      }
-      &.mfp-bg {
-        opacity: 0;
-      }
-      
-    }
-    
+
+  // .promo__logo
+
+  &__logo {
+    width: 700px;
+    margin: 0px 0px 50px 0px;
   }
-  
-  
-  
-  
+
+  // .promo__title
+
+  &__title {
+    font-size: 31px;
+    font-weight: 600;
+    margin: 0px 0px 40px 0px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  // .promo__content
+
+  &__content {
+    h2 {
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0px 0px 25px 0px;
+    }
+    font-size: 23px;
+    font-weight: 300;
+    width: toVw(750px);
+  }
+
+  // .promo__content-item
+
+  &__content-item {
+    margin: 0px 0px 25px 0px;
+    padding: 0px 0px 0px 160px;
+    min-height: 110px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+  }
+
+  // .promo__content-item-health
+
+  &__content-item-health {
+    background-image: url(/img/promo/1.png);
+  }
+
+  // .promo__content-text
+
+  &__content-text {
+  }
+
+  // .promo__content-item-child
+
+  &__content-item-child {
+    background-image: url(/img/promo/2.png);
+  }
+
+  // .promo__content-item-life
+
+  &__content-item-life {
+    background-image: url(/img/promo/3.png);
+  }
+
+  // .promo__img
+
+  &__img {
+    width: 500px;
+  }
+}
+
 // =============================================================================================================================================
 
 // =============================================================================================================================================
