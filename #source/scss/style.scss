@@ -89,7 +89,39 @@ $fontfamily: "Open Sans";
 
 .header {
   background-color: $primary-color;
+  &__burger {
+    width: 40px;
+    height: 40px;
+    background-color: $second-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    &-line {
+      width: 25px;
+      height: 2px;
+      background-color: #fff;
+      &:nth-child(2) {
+        margin: 7px 0px;
+      }
+    }
+    display: none;
+    &.open {
+      .header__burger-line {
+        transition: all 0.5s;
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(1) {
+          transform: rotate(405deg) translateY(2px);
+        }
+        &:nth-child(3) {
+          transform: rotate(-405deg) translateY(-2px);
+        }
+      }
+    }
+  }
   // .header__body
 
   &__body {
@@ -135,11 +167,13 @@ $fontfamily: "Open Sans";
         transition: all 0.3s;
       }
     }
-    &.active {
-      &:before {
-        width: 100%;
-      }
-    }
+    // a.active {
+    //   .header__menu-list {
+    //     &:before {
+    //       width: 100%;
+    //     }
+    //   }
+    // }
   }
 }
 
