@@ -24,19 +24,17 @@ $second-color: #502344;
 // ==============================================================================================================================================
 
 html,
-body{
+body {
 	height: 100%;
-
 }
 
-body{
+body {
 	color: $second-color;
 }
-a{
+a {
 	color: $second-color;
-
 }
-.wrapper{
+.wrapper {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;

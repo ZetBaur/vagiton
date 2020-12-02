@@ -5,11 +5,9 @@ $fontfamily: "Open Sans";
 @import "_normalize.scss";
 @import "_null.scss";
 @import "_global.scss";
-
-// @import "_slick.scss";
-@import "_tabs.scss";
-@import "_spoller.scss";
-
+@import "_popup.scss";
+@import "_ico.scss";
+@import "_slick.scss";
 @import "_footer.scss";
 
 // =============================================================================================================================================
@@ -356,7 +354,7 @@ $fontfamily: "Open Sans";
       .production__item-descr {
         text-align: right;
       }
-      .production__item-btn{
+      .production__item-btn {
         align-self: flex-end;
       }
     }
@@ -450,8 +448,96 @@ $fontfamily: "Open Sans";
 }
 
 // =============================================================================================================================================
+.coaches {
+  font-weight: 600;
+  font-style: italic;
+  // .coaches__inner
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+  }
+
+  // .coaches__card
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: center;
+    padding: 20px 40px;
+  }
+
+  // .coaches__img
+
+  &__img {
+    margin: 0px 0px 7px 0px;
+
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  // .coaches__city
+
+  &__city {
+    margin: 0px 0px 7px 0px;
+  }
+
+  // .coaches__name
+
+  &__name {
+    margin: 0px 0px 7px 0px;
+  }
+
+  // .coaches__phone
+
+  &__phone {
+  }
+}
 
 // =============================================================================================================================================
+.testimonials {
+  font-size: 30px;
+
+  &__body {
+    padding: 30px 0;
+  }
+  // .testimonials__inner
+
+  &__inner {
+    text-align: center;
+  }
+
+  // .testimonials__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .testimonials__title
+
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0px 0px 10px 0px;
+  }
+
+  // .testimonials__text
+
+  &__text {
+    margin: 0px 0px 20px 0px;
+  }
+
+  // .testimonials__name
+
+  &__name {
+    font-weight: 700;
+  }
+}
 
 // =============================================================================================================================================
 
